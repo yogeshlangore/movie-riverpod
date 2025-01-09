@@ -61,22 +61,19 @@ class HomeScreen extends ConsumerWidget {
                   return CarouselSlider.builder(
                     itemCount: moviesList.length,
                     itemBuilder: (context, index, realIndex) {
-                      return GestureDetector(
-                        onTap: () {},
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: CachedNetworkImage(
-                            fit: BoxFit.contain,
+                      return Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: CachedNetworkImage(
+                          fit: BoxFit.contain,
+                          width: width,
+                          height: height,
+                          imageUrl:
+                              '$imageUrl${moviesList[index].posterPath}',
+                          errorWidget: (context, url, error) => Image.asset(
+                            'assets/netflix.jpg',
+                            fit: BoxFit.fitWidth,
                             width: width,
                             height: height,
-                            imageUrl:
-                                '$imageUrl${moviesList[index].posterPath}',
-                            errorWidget: (context, url, error) => Image.asset(
-                              'assets/netflix.jpg',
-                              fit: BoxFit.fitWidth,
-                              width: width,
-                              height: height,
-                            ),
                           ),
                         ),
                       );
