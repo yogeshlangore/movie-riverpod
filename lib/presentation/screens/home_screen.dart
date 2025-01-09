@@ -29,7 +29,7 @@ class HomeScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Again Update...'),
+        title: const Text('Again Update'),
         actions: [
           IconButton(
               onPressed: () {
