@@ -96,7 +96,7 @@ class HomeScreen extends ConsumerWidget {
               MovieCategories(
                 movies: nowPlayingMovies,
               ),
-              Text('Top Rated Movies',
+              Text('TopRated Movies',
                   style: Theme.of(context).textTheme.headlineMedium!),
               MovieCategories(
                 movies: topRatedMovies,
