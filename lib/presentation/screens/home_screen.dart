@@ -67,8 +67,7 @@ class HomeScreen extends ConsumerWidget {
                           fit: BoxFit.contain,
                           width: width,
                           height: height,
-                          imageUrl:
-                              '$imageUrl${moviesList[index].posterPath}',
+                          imageUrl: '$imageUrl${moviesList[index].posterPath}',
                           errorWidget: (context, url, error) => Image.asset(
                             'assets/netflix.jpg',
                             fit: BoxFit.fitWidth,
@@ -102,15 +101,15 @@ class HomeScreen extends ConsumerWidget {
               MovieCategories(
                 movies: topRatedMovies,
               ),
-              Text('Popular Movies',
-                  style: Theme.of(context).textTheme.headlineMedium!),
-              MovieCategories(
-                movies: popularMovies,
-              ),
               Text('Upcoming Movies',
                   style: Theme.of(context).textTheme.headlineMedium!),
               MovieCategories(
                 movies: upComingMovies,
+              ),
+              Text('Popular Movies',
+                  style: Theme.of(context).textTheme.headlineMedium!),
+              MovieCategories(
+                movies: popularMovies,
               ),
             ],
           ),
