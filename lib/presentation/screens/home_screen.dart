@@ -29,7 +29,7 @@ class HomeScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Movie App'),
+        title: const Text('Update Change'),
         actions: [
           IconButton(
               onPressed: () {
