@@ -3,7 +3,6 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movie_riverpod/models/movies.dart';
-import 'package:movie_riverpod/presentation/screens/movies_details_screen.dart';
 import 'package:movie_riverpod/presentation/screens/movie_categories.dart';
 import 'package:movie_riverpod/presentation/screens/search_screen.dart';
 import 'package:movie_riverpod/providers/movies_providers.dart';
@@ -63,11 +62,7 @@ class HomeScreen extends ConsumerWidget {
                     itemCount: moviesList.length,
                     itemBuilder: (context, index, realIndex) {
                       return GestureDetector(
-                        onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => MovieDetailsScreen(
-                                  result: moviesList[index])));
-                        },
+                        onTap: () {},
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: CachedNetworkImage(
